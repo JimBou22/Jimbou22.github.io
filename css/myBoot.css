@@ -61,6 +61,7 @@
 }
 
 .container.home {
+  text-align: center;
   margin-top: 2rem;;
 }
 
@@ -68,7 +69,40 @@
   text-align: center;
 }
 
+.product img {
+  width: 400px;
+}
+
 .featureProducts img {
-  width: 200px;
-  height: 200px;
+ width: 200px;
+ height: 200px;
+}
+
+.product-details {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+#footer {
+  width: 100%;
+  color: white;
+  background-color: #005DAA;
+  text-align: center;
+}
+
+.footerButton {
+  color: white;
+}
+
+#footerNav {
+
+}
+
+#socialMediaIcons {
+  color: white;
+  margin-top: .5rem;
+}
+
+#footerCopywrite {
+    margin-top: .5rem;
 }
