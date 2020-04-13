@@ -101,7 +101,7 @@
     </div>
   </header>
 
-  <div class="container" data-name="3DPrinter" data-price="10.00">
+  <div class="container" >
     <div class="card">
       <div class="container-fliud">
         <div class="wrapper row">
@@ -110,7 +110,7 @@
               <div class="tab-pane active" id="pic-1"><img src="../images/3DPrint-Color.jpg" /></div>
             </div>
           </div>
-          <div class="details col-sm-6 product-details">
+          <div class="details col-sm-6 product-details" data-name="3DPrinter" data-price="10">
             <h3 class="product-title">3D Printer</h3>
             <div class="rating">
               <div class="stars">
@@ -125,14 +125,12 @@
             <p class="product-description">Product Description</p>
             <h4 class="price">Price: <span>$10.00</span></h4>
             <p class="vote"><strong>98%</strong> of buyers enjoyed this product! <strong>(84 votes)</strong></p>
-              <form class="add-to-cart" action="cart.html" method="POST">
-                <label for="qty-1">Quantity</label>
-                <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
-            <button class="headerButton btn" type="submit">Add to Cart</button>
-          </form>
-
+            <form class="add-to-cart" action="cart.html" method="POST">
+              <label for="qty-1">Quantity</label>
+              <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+              <input type="submit" value="Add to cart" class="headerButton btn" />
+            </form>
           </div>
-
         </div>
       </div>
     </div>

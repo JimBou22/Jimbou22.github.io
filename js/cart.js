@@ -4,7 +4,7 @@ $.Shop.prototype = {
     init: function() {
         // Properties
 
-            this.cartPrefix = "winery-"; // prefix string to be prepended to the cart's name in session storage
+            this.cartPrefix = "Notable-"; // prefix string to be prepended to the cart's name in session storage
             this.cartName = this.cartPrefix + "cart"; // cart's name in session storage
             this.shippingRates = this.cartPrefix + "shipping-rates"; // shipping rates key in session storage
             this.total = this.cartPrefix + "total"; // total key in the session storage
@@ -41,6 +41,15 @@ $.Shop.prototype = {
             };
 
             // public methods invocation
+            this.createCart();
+      			this.handleAddToCartForm();
+      			this.handleCheckoutOrderForm();
+      			this.emptyCart();
+      			this.updateCart();
+      			this.displayCart();
+      			this.deleteProduct();
+      			this.displayUserDetails();
+      			this.populatePayPalForm();
     }
 };
 
@@ -70,6 +79,7 @@ handleAddToCartForm: function() {
         var name =  $product.data( "name" );
 
         $form.on( "submit", function() {
+            alert("Trying to submit something!");
             var qty = self._convertString( $form.find( ".qty" ).val() );
             var subTotal = qty * price;
             var total = self._convertString( self.storage.getItem( self.total ) );
