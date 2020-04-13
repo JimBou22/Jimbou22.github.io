@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/myBoot.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='icon' href='../images/favicon.ico' type='image/x-icon'/>
+  <link rel="stylesheet" href = "../css/cart.css">
   <title>Cart</title>
 </head>
 <body>
@@ -25,15 +27,15 @@
       <div class="col-sm-4" id="searchForm">
         <form class="form-inline-custom">
           <input class="searchWidth mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="headerButton btn my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
+          <button class="headerButton buttons my-2 my-sm-0" id="searchbuttons" type="submit">Search</button>
         </form>
       </div>
 
       <div class="col-sm-4">
         <div class="leftHeader">
           <span class="glyphicon glyphicon-shopping-cart"></span>
-          <a class="headerButton btn" href="#" role="button">Cart</a>
-          <a class="headerButton btn" href="#" role="button">My Account</a>
+          <a class="headerButton buttons" href="#" role="button">Cart</a>
+          <a class="headerButton buttons" href="#" role="button">My Account</a>
         </div>
       </div>
     </div>
@@ -111,16 +113,16 @@
       </p>
       <ul id="shopping-cart-actions">
           <li>
-              <input type="submit" name="update" id="update-cart" class="btn" value="Update Cart" />
+              <input type="submit" name="update" id="update-cart" class="buttons" value="Update Cart" />
           </li>
           <li>
-              <input type="submit" name="delete" id="empty-cart" class="btn" value="Empty Cart" />
+              <input type="submit" name="delete" id="empty-cart" class="buttons" value="Empty Cart" />
           </li>
           <li>
-              <a href="home.html" class="btn">Continue Shopping</a>
+              <a href="home.html" class="buttons">Continue Shopping</a>
           </li>
           <li>
-              <a href="checkout.html" class="btn">Go To Checkout</a>
+              <a href="checkout.html" class="buttons">Go To Checkout</a>
           </li>
       </ul>
   </form>
