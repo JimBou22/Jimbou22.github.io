@@ -9,8 +9,3 @@
   display: flex;
   flex-direction: column;
 }
-.buttons {
-  position: relative;
-  padding-top: 30px;
-  margin-right: 60px;
-}
