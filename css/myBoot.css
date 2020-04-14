@@ -84,15 +84,17 @@
   text-align: left;
 }
 
-footer {
+/* footer {
   border-top: .1rem solid black;
-}
+} */
 
 #footer {
   width: 100%;
   color: white;
   background-color: #005DAA;
   text-align: center;
+  margin-top: 200px;
+
 }
 
 footer a {

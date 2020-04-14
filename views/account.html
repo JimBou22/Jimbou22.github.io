@@ -5,35 +5,41 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link rel='icon' href='../images/favicon.ico' type='image/x-icon' />
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="../css/bootstrap.css">
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/myBoot.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>Javelin</title>
+  <title>My Account</title>
 </head>
 
 <body>
   <div id="homeHeader">
     <div class="row" id="topRow">
       <div class="col-sm-4">
-        <img src="Notorious-Wholesale-logo.png" id="mainLogo" alt="">
+        <a href="home.html"><img src="../images/notableWholesaleLogo.png" id="mainLogo" alt=""></a>
       </div>
 
       <div class="col-sm-4" id="searchForm">
         <form class="form-inline-custom">
           <input class="searchWidth mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="headerButton btn my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
+          <button class="headerButton btn my-2 my-sm-0" id="searchBtn" type="submit"><i class="fa fa-search"></i> Search</button>
         </form>
       </div>
 
       <div class="col-sm-4">
         <div class="leftHeader">
-          <span class="glyphicon glyphicon-shopping-cart"></span>
-          <a class="headerButton btn" href="#" role="button">Cart</a>
-          <a class="headerButton btn" href="#" role="button">My Account</a>
+          <a class="headerButton btn" href="cart.html" role="button"><i class="fa fa-shopping-cart"></i> Cart</a>
+          <a class="headerButton btn" href="account.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user-circle"></i> My Account
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="account.html"><i class="fa fa-user"></i> User Profile</a>
+            <a class="dropdown-item" href="orders.html"><i class="fa fa-list-ul"></i> Order History</a>
+            <a class="dropdown-item" href="wishlist.html"><i class="fa fa-gift"></i> Wishlist</a>
+          </div>
         </div>
       </div>
     </div>
@@ -86,9 +92,9 @@
           Office Supplies
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Stapler</a>
-          <a class="dropdown-item" href="#">Paper Shredder</a>
-          <a class="dropdown-item" href="#">3D Printer</a>
+          <a class="dropdown-item" href="stapler.html">Stapler</a>
+          <a class="dropdown-item" href="shredder.html">Paper Shredder</a>
+          <a class="dropdown-item" href="3dprinter.html">3D Printer</a>
         </div>
       </nav>
     </div>
@@ -97,7 +103,7 @@
   <div class="container home">
     <div class="row">
       <div class="col-md-12">
-        <h1>Sporting Goods</h1>
+        <h1>User Profile</h1>
       </div>
     </div>
   </div>
@@ -108,25 +114,41 @@
         <div class="wrapper row">
           <div class="col-sm-6">
             <div class="preview-pic tab-content product">
-              <div class="tab-pane active" id="pic-1"><img src="javelin.jpg" /></div>
+              <div class="tab-pane active" id="pic-1"><img src="../images/rusty.jpg" /></div>
             </div>
           </div>
           <div class="details col-sm-6 product-details">
-            <h3 class="product-title">Authentic Roman Javelin</h3>
-            <div class="rating">
-              <div class="stars">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <span class="fa fa-star"></span>
+            <a class="headerButton btn" href="orders.html" role="button"><i class="fa fa-list-ul"></i> Order History</a>
+            <a class="headerButton btn" href="wishlist.html" role="button"><i class="fa fa-gift"></i> Wishlist</a>
+            <h3 class="product-title">Account Details</h3>
+            <div class="container">
+              <h4 class="">Log In Details</h4>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="">Email Address:</p>
+                </div>
+                <div class="col-sm-6">
+                  <p class="">rusty.shackleford@shasha.com</p>
+                </div>
               </div>
-              <span class="review-no">41 reviews</span>
+              <h4 class="price">Shipping Address</h4>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="product-description">Street:</p>
+                </div>
+                <div class="col-sm-6">
+                  <p class="product-description">1234 E Shasha Street</p>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-sm-3">
+                  <p class="product-description">City:</p>
+                </div>
+                <div class="col-sm-3">
+                  <p class="product-description">Arlen, TX</p>
+                </div>
+              </div>
             </div>
-            <p class="product-description">Take your javelin skills to new levels with this Roman javelin, complete with iron head</p>
-            <h4 class="price">Price: <span>$575.99</span></h4>
-            <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-            <a class="headerButton btn" href="#" role="button">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -134,17 +156,54 @@
   </div>
 
   <footer>
-    <nav class="fixed-bottom" id="footer">
+    <nav class="" id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm" id="footerNav">
-            <a class="footerButton btn" href="#" role="button">About</a>
-            <a class="footerButton btn" href="#" role="button">Help</a>
+          <div class="col-sm-4 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3">About</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Contact Us</a>
+              </li>
+              <li>
+                <a href="#!">About Us</a>
+              </li>
+              <li>
+                <a href="#!">Careers</a>
+              </li>
+              <li>
+                <a href="#!">User Stories</a>
+              </li>
+              <li>
+                <a href="#!">Testimonials</a>
+              </li>
+              <li>
+                <a href="#!">Press</a>
+              </li>
+              <li>
+                <a href="#!">Photos</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-sm" id="footerCopywrite">
-            <p>&copy; 2020 Notorious Wholesale</p>
+          <div class="col-sm-4 mx-auto">
+            <h5 class="font-weight-bold text-uppercase mt-3">Help</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">Payments</a>
+              </li>
+              <li>
+                <a href="#!">Shipping</a>
+              </li>
+              <li>
+                <a href="#!">Cancellation & Returns</a>
+              </li>
+              <li>
+                <a href="#!">FAQ</a>
+              </li>
+            </ul>
           </div>
-          <div class="col-sm" id="socialMediaIcons">
+          <div class="col-sm-4" id="socialMediaIcons">
+            <h5 class="font-weight-bold text-uppercase mt-1">Social</h5>
             <span>
               <a class="fb-ic mr-3" role="button"><i class="fa fa-lg fa-facebook-f"></i></a>
               <a class="tw-ic mr-3" role="button"><i class="fa fa-lg fa-twitter"></i></a>
@@ -154,6 +213,9 @@
         </div>
       </div>
     </nav>
+    </div>
+    <div id="footer-copyright" class="footer-copyright text-center py-3">© 2020 Notable Wholesale
+    </div>
   </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
