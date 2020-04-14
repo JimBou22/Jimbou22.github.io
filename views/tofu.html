@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel='icon' href='../images/favicon.ico' type='image/x-icon' />
+  <link rel='icon' href='../images/favicon.ico' type='image/x-icon'/>
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="../css/bootstrap.css">
@@ -17,29 +17,39 @@
 </head>
 
 <body>
+
   <header>
+
     <div id="homeHeader">
+
       <div class="row" id="topRow">
         <div class="col-sm-4">
-          <a href="home.html"><img src="../Images/notableWholesaleLogo.png" id="mainLogo" alt=""></a>
+          <a href="home.html"><img src="../images/notableWholesaleLogo.png" id="mainLogo" alt=""></a>
         </div>
 
         <div class="col-sm-4" id="searchForm">
           <form class="form-inline-custom">
             <input class="searchWidth mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="headerButton btn my-2 my-sm-0" id="searchBtn" type="submit">Search</button>
+            <button class="headerButton btn my-2 my-sm-0" id="searchBtn" type="submit"><i class="fa fa-search"></i> Search</button>
           </form>
         </div>
 
         <div class="col-sm-4">
           <div class="leftHeader">
-            <span class="glyphicon glyphicon-shopping-cart"></span>
-            <a class="headerButton btn" href="#" role="button">Cart</a>
-            <a class="headerButton btn" href="#" role="button">My Account</a>
+            <a class="headerButton btn" href="cart.html" role="button"><i class="fa fa-shopping-cart"></i> Cart</a>
+            <a class="headerButton btn" href="account.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-circle"></i> My Account
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="account.html"><i class="fa fa-user"></i> User Profile</a>
+              <a class="dropdown-item" href="orders.html"><i class="fa fa-list-ul"></i> Order History</a>
+              <a class="dropdown-item" href="wishlist.html"><i class="fa fa-gift"></i> Wishlist</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <div class="productMenu">
       <div class="d-flex justify-content-center">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -59,9 +69,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
             <a class="dropdown-item" href="clothing.html">All Clothing</a>
-            <a class="dropdown-item" href="romphim.html">Romphim</a>
-            <a class="dropdown-item" href="onesie.html">Onesie</a>
-            <a class="dropdown-item" href="snuggy.html">Snuggy</a>
+            <a class="dropdown-item" href="romphim.html">Romphims</a>
+            <a class="dropdown-item" href="onesie.html">Onesies</a>
+            <a class="dropdown-item" href="snuggy.html">Snuggies</a>
           </div>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -70,9 +80,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="electronics.html">All Electronics</a>
-            <a class="dropdown-item" href="computer.html">Computer</a>
-            <a class="dropdown-item" href="HDMI.html">HDMI Cable</a>
-            <a class="dropdown-item" href="TV.html">Television</a>
+            <a class="dropdown-item" href="computer.html">Computers</a>
+            <a class="dropdown-item" href="HDMI.html">HDMI Cables</a>
+            <a class="dropdown-item" href="TV.html">Televisions</a>
           </div>
         </nav>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -82,7 +92,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="sporting-goods.html">All Sporting Goods</a>
             <a class="dropdown-item" href="nunchucks.html">Nunchucks</a>
-            <a class="dropdown-item" href="javelin.html">Javelin</a>
+            <a class="dropdown-item" href="javelin.html">Javelins</a>
             <a class="dropdown-item" href="skates.html">Rocket Skates</a>
           </div>
         </nav>
@@ -92,9 +102,9 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="office-supplies.html">All Office Supplies</a>
-            <a class="dropdown-item" href="stapler.html">Stapler</a>
-            <a class="dropdown-item" href="shredder.html">Paper Shredder</a>
-            <a class="dropdown-item" href="3dprinter.html">3D Printer</a>
+            <a class="dropdown-item" href="stapler.html">Staplers</a>
+            <a class="dropdown-item" href="shredder.html">Paper Shredders</a>
+            <a class="dropdown-item" href="3dprinter.html">3D Printers</a>
           </div>
         </nav>
       </div>
@@ -103,7 +113,7 @@
 
   <div class="container">
     <div class="card">
-      <div class="container-fliud">
+      <div class="container-fluid">
         <div class="wrapper row">
           <div class="col-sm-6">
             <div class="preview-pic tab-content product">
