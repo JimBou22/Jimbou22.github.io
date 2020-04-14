@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel='icon' href='../images/favicon.ico' type='image/x-icon'/>
+  <link rel='icon' href='../images/favicon.ico' type='image/x-icon' />
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
   <link rel="stylesheet" href="../css/bootstrap.css">
@@ -135,7 +135,14 @@
             <p class="product-description">Whether you're making a getaway or just taking a stroll, these rocket-powered skates will do the job</p>
             <h4 class="price">Price: <span>$299.99</span></h4>
             <p class="vote"><strong>93%</strong> of buyers enjoyed this product! <strong>(67 votes)</strong></p>
-            <a class="headerButton btn" href="#" role="button">Add to Cart</a>
+            <!-- <a class="headerButton btn" href="#" role="button">Add to Cart</a> -->
+
+            <form action="cart.html" method="POST">
+              <label for="qty-1">Quantity</label>
+              <input type="text" name="qty-1" class="quantity" value="1" />
+              <button class="addToCart headerButton btn">Add to cart</button>
+            </form>
+
           </div>
         </div>
       </div>
@@ -209,6 +216,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="../js/zachCart.js"></script>
 </body>
 
 </html>
