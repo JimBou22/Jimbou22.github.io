@@ -4709,6 +4709,7 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid black;;
+  margin-bottom: 1rem;
 }
 
 .card>hr {

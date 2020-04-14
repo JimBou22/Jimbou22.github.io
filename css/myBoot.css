@@ -86,7 +86,12 @@
 
 /* footer {
   border-top: .1rem solid black;
+<<<<<<< HEAD
 } */
+=======
+  border-bottom: .1rem solid black;
+}
+>>>>>>> 967056d5ca291dfcec951a850d717f177ea1ae6f
 
 #footer {
   width: 100%;
