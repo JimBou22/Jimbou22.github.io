@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     });
 
-
+    
 
   $("#n1").html(sessionStorage.getItem("3DPrinter"));
   $("#q1").html(sessionStorage.getItem("3DPrinterQuantity"));
