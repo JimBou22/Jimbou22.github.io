@@ -35,7 +35,6 @@ for(var i =0; i<keys.length;i+=3){
 // alert("right before 2nd for loop");
 for(var j = 1; j <=3; j++){
   var sub = parseFloat(document.getElementById("p"+ j).innerHTML.replace("$",""));
-  alert(sub);
   document.getElementById("sub-total").innerHTML += sub;
 }
 
