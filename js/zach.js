@@ -1,77 +1,95 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-class Product {
-  constructor(name, price, image, url) {
-    this.name = name;
-    this.price = price;
-    this.image = image;
-    this.url = url;
+  class Product {
+    constructor(name, price, image, url) {
+      this.name = name;
+      this.price = price;
+      this.image = image;
+      this.url = url;
+    }
   }
-}
 
-myProd1 = new Product("Authentic Roman Javelin", 575.99, "../images/javelin.jpg", "javelin.html");
-myProd2 = new Product("Nunchucks", 49.99, "../images/nunchucks.jpg", "nunchucks.html");
-myProd3 = new Product("Rocket Powered Rollerskates", 299.99, "../images/skates.jpg", "skates.html");
+  var name = $(".prod-1 .prodName").html();
+  var price =$(".prod-1 .prodPrice").html();
+  var img = $(".prod-1 img").attr('src');
+  var url = $(".prod-1 a").attr('href');
+  product1 = new Product(name, price, img, url);
 
-var products = [myProd1, myProd2, myProd3];
+  var name2 = $(".prod-2 .prodName").html();
+  var price2 = $(".prod-2 .prodPrice").html();
+  var img2 = $(".prod-2 img").attr("src");
+  var url2 = $(".prod-2 a").attr("href");
+  product2 = new Product(name2, price2, img2, url2);
 
-products.sort(function(a, b) {
-  return a.price - b.price
-});
+  var name3 = $(".prod-3 .prodName").html();
+  var price3 = $(".prod-3 .prodPrice").html();
+  var img3 = $(".prod-3 img").attr("src");
+  var url3 = $(".prod-3 a").attr("href");
+  product3 = new Product(name3, price3, img3, url3);
 
-var showSorted = function () {
-  $("#SGProductsStart").hide();
+  // myProd1 = new Product("Authentic Roman Javelin", 575.99, "../images/javelin.jpg", "javelin.html");
+  // myProd2 = new Product("Nunchucks", 49.99, "../images/nunchucks.jpg", "nunchucks.html");
+  // myProd3 = new Product("Rocket Powered Rollerskates", 299.99, "../images/skates.jpg", "skates.html");
+  // var products = [myProd1, myProd2, myProd3];
 
-  var i;
-  for (i = 0; i < products.length; i++){
-    $("#SGprod"+(i+1)+" a").attr("href", products[i].url);
-    $("#SGprod"+(i+1)+" img").attr("src", products[i].image);
-    $("#SGprod"+(i+1)+" .name").html(products[i].name);
-    $("#SGprod"+(i+1)+" .price").html("$" + products[i].price);
-  }
-};
+  var products = [product1, product2, product3];
 
-$("#sortButton").on("click", showSorted);
+  // Sort Ascending Method
+  var showSorted = function() {
+    $("#SGProductsStart").hide();
+    $("#SG-Products-Sort").show();
 
-  // $("#SGprod1 a").attr("href", products[0].url);
-  // $("#SGprod1 img").attr("src", products[0].image);
-  // $("#SGprod1 .name").html(products[0].name);
-  // $("#SGprod1 .price").html("$" + products[0].price);
-  //
-  // $("#SGprod2 a").attr("href", products[1].url);
-  // $("#SGprod2 img").attr("src", products[1].image);
-  // $("#SGprod2 .name").html(products[1].name);
-  // $("#SGprod2 .price").html("$" + products[1].price);
-  //
-  // $("#SGprod3 a").attr("href", products[2].url);
-  // $("#SGprod3 img").attr("src", products[2].image);
-  // $("#SGprod3 .name").html(products[2].name);
-  // $("#SGprod3 .price").html("$" + products[2].price);
+    products.sort(function(a, b) {
+      return a.price - b.price;
+    });
 
-  // $("#SGprod1 a").attr("href", products[0].url);
-  // $("#SGprod1 img").attr("src", products[0].image);
-  // $("#SGprod1 .name").html(products[0].name);
-  // $("#SGprod1 .price").html("$" + products[0].price);
+    var i;
+    for (i = 0; i < products.length; i++) {
+      $(".prodSort-" + (i + 1) + " a").attr("href", products[i].url);
+      $(".prodSort-" + (i + 1) + " img").attr("src", products[i].image);
+      $(".prodSort-" + (i + 1) + " .name").html(products[i].name);
+      $(".prodSort-" + (i + 1) + " .price").html(products[i].price);
+    }
+  };
 
+  // Sort Descending Method
+  var showReverseSorted = function() {
+    $("#SGProductsStart").hide();
+    $("#SG-Products-Sort").show();
 
-// var showSorted = function () {
-//   $("#SGprod1 a").attr("href", products[0].url);
-//   $("#SGprod1 img").attr("src", products[0].image);
-//   $("#SGprod1 .name").html(products[0].name);
-//   $("#SGprod1 .price").html("$" + products[0].price);
-// };
+    products.sort(function(a, b) {
+      return b.price - a.price;
+    });
 
+    var i;
+    for (i = 0; i < products.length; i++) {
+      $(".prodSort-" + (i + 1) + " a").attr("href", products[i].url);
+      $(".prodSort-" + (i + 1) + " img").attr("src", products[i].image);
+      $(".prodSort-" + (i + 1) + " .name").html(products[i].name);
+      $(".prodSort-" + (i + 1) + " .price").html(products[i].price);
+    }
+  };
 
+  // Sort Alphabetically Method
+  var alphaSort = function() {
+    $("#SGProductsStart").hide();
+    $("#SG-Products-Sort").show();
 
+    products.sort((a, b) => a.name.localeCompare(b.name));
 
-// document.getElementById("prod-1-name").innerHTML = products[0].name;
-// document.getElementById("prod-1-price").innerHTML = "$ " + products[0].price;
-//
-// document.getElementById("prod-2-name").innerHTML = products[1].name;
-// document.getElementById("prod-2-price").innerHTML = "$ " + products[1].price;
-//
-// document.getElementById("prod-3-name").innerHTML = products[2].name;
-// document.getElementById("prod-3-price").innerHTML = "$ " + products[2].price;
+    var i;
+    for (i = 0; i < products.length; i++) {
+      $(".prodSort-" + (i + 1) + " a").attr("href", products[i].url);
+      $(".prodSort-" + (i + 1) + " img").attr("src", products[i].image);
+      $(".prodSort-" + (i + 1) + " .name").html(products[i].name);
+      $(".prodSort-" + (i + 1) + " .price").html(products[i].price);
+    }
+  };
 
+  $("#sortAscending").on("click", showSorted);
+
+  $("#sortDescending").on("click", showReverseSorted);
+
+  $("#sortAlpha").on("click", alphaSort);
 
 });
