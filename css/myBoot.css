@@ -139,3 +139,7 @@ footer a:hover {
 #SG-Products-Sort {
   display: none;
 }
+
+#topRow {
+  align-items: center;
+}
