@@ -1,5 +1,8 @@
 (function( $ ) {
-
+  $.Shop = function( element ) {
+  		this.$element = $( element );
+  		this.init();
+  	};
 $.Shop.prototype = {
     init: function() {
         // Properties
@@ -55,7 +58,7 @@ $.Shop.prototype = {
 
 // Creates the cart keys in session storage
 
-createCart: function() {
+function createCart() {
     if( this.storage.getItem( this.cartName ) == null ) {
 
         var cart = {};
@@ -70,7 +73,7 @@ createCart: function() {
 
 // Adds items to shopping cart
 
-handleAddToCartForm: function() {
+ function handleAddToCartForm() {
     var self = this;
     self.$formAddToCart.each(function() {
         var $form = $( this );
@@ -101,7 +104,7 @@ handleAddToCartForm: function() {
 
 // Displays the shopping cart
 
-displayCart: function() {
+function displayCart(){
     if( this.$formCart.length ) {
         var cart = this._toJSONObject( this.storage.getItem( this.cartName ) );
         var items = cart.items;
@@ -147,7 +150,7 @@ displayCart: function() {
 
 // Updates the cart
 
-updateCart: function() {
+function updateCart(){
         var self = this;
     if( self.$updateCartBtn.length ) {
         self.$updateCartBtn.on( "click", function() {
@@ -191,7 +194,7 @@ updateCart: function() {
 // Empties the cart by calling the _emptyCart() method
 // @see $.Shop._emptyCart()
 
-emptyCart: function() {
+function emptyCart() {
     var self = this;
     if( self.$emptyCartBtn.length ) {
         self.$emptyCartBtn.on( "click", function() {
@@ -202,7 +205,7 @@ emptyCart: function() {
 
 // Handles the checkout form by adding a validation routine and saving user’s info in session storage
 
-handleCheckoutOrderForm: function() {
+function handleAddToCartForm() {
     var self = this;
     if( self.$checkoutOrderForm.length ) {
         var $sameAsBilling = $( "#same-as-billing" );
@@ -230,7 +233,7 @@ handleCheckoutOrderForm: function() {
 
 // Displays the user's information
 
-displayUserDetails: function() {
+function displayUserDetails() {
     if( this.$userDetails.length ) {
         if( this.storage.getItem( "shipping-name" ) == null ) {
             var name = this.storage.getItem( "billing-name" );
@@ -297,7 +300,7 @@ displayUserDetails: function() {
 
 // Appends the required hidden values to PayPal's form before submitting
 
-populatePayPalForm: function() {
+function populatePayPalForm() {
     var self = this;
     if( self.$paypalForm.length ) {
         var $form = self.$paypalForm;
@@ -337,7 +340,7 @@ populatePayPalForm: function() {
 $.Shop.prototype = {
     // empties session storage
 
-    _emptyCart: function() {
+    _emptyCart:function() {
         this.storage.clear();
     }
 };
@@ -348,7 +351,7 @@ $.Shop.prototype = {
  * @returns n Number the formatted number
 */
 
-_formatNumber: function( num, places ) {
+function _formatNumber( num, places ) {
     var n = num.toFixed( places );
     return n;
 }
@@ -358,7 +361,7 @@ _formatNumber: function( num, places ) {
  * @returns price String the numeric string
  */
 
-_extractPrice: function( element ) {
+function _extractPrice( element ) {
     var self = this;
     var text = $.trim(element.text());
     var price = text.replace( self.currencyString, "" ).replace( " ", "" );
@@ -370,7 +373,7 @@ _extractPrice: function( element ) {
  * @returns num Number the number, or false if the string cannot be converted
  */
 
-_convertString: function( numStr ) {
+function _convertString( numStr ) {
     var num;
     if( /^[-+]?[0-9]+.[0-9]+$/.test( numStr ) ) {
         num = parseFloat( numStr );
@@ -386,14 +389,14 @@ _convertString: function( numStr ) {
         console.warn( numStr + " cannot be converted into a number" );
         return false;
     }
-},
+}
 
 /* Converts a number to a string
  * @param n Number the number to be converted
  * @returns str String the string returned
  */
 
-_convertNumber: function( n ) {
+function _convertNumber( n ) {
     var str = n.toString();
     return str;
 }
@@ -403,17 +406,17 @@ _convertNumber: function( n ) {
  * @returns obj Object the JavaScript object
  */
 
-_toJSONObject: function( str ) {
+function _toJSONObject( str ) {
     var obj = JSON.parse( str );
     return obj;
-},
+}
 
 /* Converts a JavaScript object to a JSON string
  * @param obj Object the JavaScript object
  * @returns str String the JSON string
  */
 
-_toJSONString: function( obj ) {
+function _toJSONString( obj ) {
     var str = JSON.stringify( obj );
     return str;
 }
@@ -423,7 +426,7 @@ _toJSONString: function( obj ) {
  * @returns void
  */
 
-_addToCart: function( values ) {
+function _addToCart( values ) {
     var cart = this.storage.getItem( this.cartName );
     var cartObject = this._toJSONObject( cart );
     var cartCopy = cartObject;
@@ -438,7 +441,7 @@ _addToCart: function( values ) {
  * @returns shipping Number the shipping rates
  */
 
-_calculateShipping: function( qty ) {
+function _calculateShipping( qty ) {
     var shipping = 0;
     if( qty >= 6 ) {
         shipping = 10;
@@ -464,7 +467,7 @@ _calculateShipping: function( qty ) {
  * @returns valid Boolean true for success, false for failure
  */
 
-_validateForm: function( form ) {
+function _validateForm( form ) {
         var self = this;
         var fields = self.requiredFields;
         var $visibleSet = form.find( "fieldset:visible" );
@@ -506,7 +509,7 @@ _validateForm: function( form ) {
  * @returns void
  */
 
-_saveFormData: function( form ) {
+function _saveFormData( form ) {
     var self = this;
     var $visibleSet = form.find( "fieldset:visible" );
 
