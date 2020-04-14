@@ -114,25 +114,57 @@
     <div class="row">
       <div class="col-md-12">
         <h1>Electronics</h1>
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Sort Products
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" id="sortAscending" href="#">Price - Low to High</a>
+            <a class="dropdown-item" id="sortDescending" href="#">Price - High to Low</a>
+            <a class="dropdown-item" id="sortAlpha" href="#">Name - Alphabetically</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="container home">
+
+
+  <div id="SGProductsStart" class="container home">
     <div class="row featureProducts">
-      <div class="col-sm-4">
-        <a href="TV.html"><img src="../images/TV.jfif" alt=""></a>
-        <p>TV</p>
-        <p>$</p>
+      <div class="prod-1 col-sm-4">
+        <a href="TV.html"><img src="../images/television.jpg" alt=""></a>
+        <p class="prodName">TV</p>
+        <p class="prodPrice">299.99</p>
       </div>
-      <div class="col-sm-4">
+      <div class="prod-2 col-sm-4">
         <a href="computer.html"><img src="../images/red-calc.jfif" alt=""></a>
-        <p>Computer</p>
-        <p>$</p>
+        <p class="prodName">Computer</p>
+        <p class="prodPrice">12.99</p>
       </div>
-      <div class="col-sm-4">
+      <div class="prod-3 col-sm-4">
         <a href="HDMI.html"><img src="../images/displayport-cable.jfif" alt=""></a>
-        <p>Display Cable</p>
-        <p>$</p>
+        <p class="prodName">Display Cable</p>
+        <p class="prodPrice">18.99</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="SG-Products-Sort" class="container home">
+    <div class="row featureProducts">
+      <div class="prodSort-1 col-sm-4">
+        <a href=""><img src="" alt=""></a>
+        <p class="name"></p>
+        <p class="price"></p>
+      </div>
+      <div class="prodSort-2 col-sm-4">
+        <a href=""><img src="" alt=""></a>
+        <p class="name"></p>
+        <p class="price"></p>
+      </div>
+      <div class="prodSort-3 col-sm-4">
+        <a href=""><img src="" alt=""></a>
+        <p class="name"></p>
+        <p class="price"></p>
       </div>
     </div>
   </div>
@@ -205,7 +237,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="js/colors.js"></script>
+        <script src="../js/zach.js"></script>
     </body>
 
     </html>
