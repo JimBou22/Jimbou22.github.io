@@ -27,11 +27,6 @@ $(document).ready(function() {
   var url3 = $(".prod-3 a").attr("href");
   product3 = new Product(name3, price3, img3, url3);
 
-  // myProd1 = new Product("Authentic Roman Javelin", 575.99, "../images/javelin.jpg", "javelin.html");
-  // myProd2 = new Product("Nunchucks", 49.99, "../images/nunchucks.jpg", "nunchucks.html");
-  // myProd3 = new Product("Rocket Powered Rollerskates", 299.99, "../images/skates.jpg", "skates.html");
-  // var products = [myProd1, myProd2, myProd3];
-
   var products = [product1, product2, product3];
 
   // Sort Ascending Method
