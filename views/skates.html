@@ -138,10 +138,10 @@
             <p> Status: <span>Available</span></p>
             <!-- <a class="headerButton btn" href="#" role="button">Add to Cart</a> -->
 
-            <form action="cart.html" method="POST">
+            <form class="add-to-cart" action="cart.html" method="POST">
               <label for="qty-1">Quantity</label>
-              <input type="text" name="qty-1" class="quantity" value="1" />
-              <button class="addToCart headerButton btn">Add to cart</button>
+              <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+              <button id = "cart" value="Add to cart" class="headerButton btn">Add to cart</button>
             </form>
 
           </div>
@@ -219,6 +219,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="../js/zachCart.js"></script>
   <script src="../js/search.js"></script>
+  <script src="../js/cartTest.js"></script>
 </body>
 
 </html>
