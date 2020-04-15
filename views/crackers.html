@@ -135,7 +135,11 @@
             <p class="product-description">Beluga Sturgeon Caviar flavored crackers.</p>
             <h4 class="price">Price: <span>$3.89</span></h4>
             <p class="vote"><strong>98%</strong> of buyers enjoyed this product! <strong>(84 votes)</strong></p>
-            <a class="headerButton btn" href="#" role="button">Add to Cart</a>
+            <form class="add-to-cart" action="cart.html" method="POST">
+              <label for="qty-1">Quantity</label>
+              <input type="text" name="qty-1" id="qty-1" class="qty" value="1" />
+              <button id = "cart" value="Add to cart" class="headerButton btn">Add to cart</button>
+            </form>
           </div>
         </div>
       </div>
