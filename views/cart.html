@@ -116,29 +116,46 @@
     <button id="tCart" onclick="display()" class="headerButton">View</button>
     <form id="shopping-cart" action="cart.html" method="post">
       <table class="shopping-cart" id="cart-table">
-        <tr>
-          <th scope="col">Item</th>
-          <th scope="col">Qty</th>
-          <th scope="col">Price</th>
-        </tr>
-        <div id="cart-stuff">
-          <tr>
-            <td id="n1"></td>
-            <td id="q1"></td>
-            <td id="p1"></td>
-          </tr>
-          <tr>
-            <td id="n2"></td>
-            <td id="q2"></td>
-            <td id="p2"></td>
-          </tr>
-          <tr>
-            <td id="n3"></td>
-            <td id="q3"></td>
-            <td id="p3"></td>
-          </tr>
-        </div>
-        <tbody></tbody>
+              <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Qty</th>
+                  <th scope="col">Price</th>
+              </tr>
+              <div id="cart-stuff">
+              <tr>
+                <td id ="n1"></td>
+                <td id ="q1"></td>
+                <td id ="p1"></td>
+                <td id="del1">
+                  <button type="button" class="headerButton" onclick="productDelete()">DELETEME</button>
+                </td>
+              </tr>
+              <tr>
+              <td id ="n2"></td>
+              <td id ="q2"></td>
+              <td id ="p2"></td>
+              <td id="del2"></td>
+              </tr>
+              <tr>
+              <td id ="n3"></td>
+              <td id ="q3"></td>
+              <td id ="p3"></td>
+              <td id="del3"></td>
+              </tr>
+              <tr>
+              <td id ="n4"></td>
+              <td id ="q4"></td>
+              <td id ="p4"></td>
+              <td id="del4"></td>
+              </tr>
+              <tr>
+              <td id ="n5"></td>
+              <td id ="q5"></td>
+              <td id ="p5"></td>
+              <td id="del5"></td>
+              </tr>
+              </div>
+          <tbody></tbody>
       </table>
       <p id="sub-total">
         <strong>Sub Total</strong>: <span id="stotal"></span>
@@ -229,9 +246,9 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <!-- <script src="../js/cart.js"></script>
-    <script src="../js/cartTest.js"></script> -->
-    <script src="../js/zachCart.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/cartTest.js"></script>
+    <!-- <script src="../js/zachCart.js"></script> -->
   </body>
 
   </html>

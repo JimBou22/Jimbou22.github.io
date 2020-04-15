@@ -7,10 +7,10 @@ $(document).ready(function(){
     }
   }
   $("#cart").click(function(){
-    var name = $(this).data("name");
-    var price = $(this).data("price");
-    var quantity = $("#qty-1").attr("value");
-    alert(name + price + quantity + " is the product");
+    var name = $(".product-title").html();
+    var price = $(".price span").html();
+    var quantity = $(".qty").val();
+    // alert(name + price + quantity + " is the product");
     var x = new cartItem(name,quantity,price);
     // if(sessionStorage.getItem("myCart") ===undefined){
     //   var cart = {x};
@@ -21,24 +21,32 @@ $(document).ready(function(){
     //   sessionStorage.setItem("myCart", JSON.stringify(myStuff))
     // }
     sessionStorage.setItem(name,name);
-    sessionStorage.setItem("3DPrinterQuantity",quantity);
-    sessionStorage.setItem("3DPrinterPrice",price);
-
+    sessionStorage.setItem(name + "Quantity",quantity);
+    sessionStorage.setItem(name + "Price",price);
     });
 
-    
+var keys = Object.keys(sessionStorage);
+keys.sort();
+for(var i =0; i<keys.length;i+=3){
+  $("#n" + (i/3+1)).html(sessionStorage.getItem(keys[i]));
+  $("#q" + (i/3+1)).html(sessionStorage.getItem(keys[i + 2]));
+  $("#p" + (i/3+1)).html(sessionStorage.getItem(keys[i + 1]));
+  // $("#d" + (i/3+1)).html("<button class=\"delete\" onclick=\"productDelete()\">DELETEME</button>")
+}
 
-  $("#n1").html(sessionStorage.getItem("3DPrinter"));
-  $("#q1").html(sessionStorage.getItem("3DPrinterQuantity"));
-  $("#p1").html(sessionStorage.getItem("3DPrinterPrice"));
+function productDelete() {
+  //removing storage session stuff
 
-//
-// function display() {
-//     var cart = JSON.parse(sessionStorage.getItem("myCart"));
-//     var content = document.getElementById("cartTable");
-//
-//     content.innerHTML = cart.map(product => {
-//         return '<tr><td>' + product.name + '</td><td>' + product.price + '</td></tr>';
-//     }).join('');
+  var num =
+  sessionStorage.removeItem(name);
+  sessionStorage.removeItem(name + "Quantity");
+  sessionStorage.removeItem(name + "Price");
+}
+
+// alert("right before 2nd for loop");
+// for(var j = 1; j <=3; j++){
+//   var sub = parseFloat(document.getElementById("p"+ j).innerHTML.replace("$",""));
+//   document.getElementById("sub-total").innerHTML += sub;
 // }
+
 });
