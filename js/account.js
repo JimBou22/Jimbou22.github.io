@@ -16,6 +16,7 @@ function btnClicked() {
   $("#pwEdit").replaceWith(editableText2);
   $("#streetEdit").replaceWith(editableText3);
   $("#cityEdit").replaceWith(editableText4);
+  $("#pwEdit").show();
 }
 
 function saveClick() {
