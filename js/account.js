@@ -3,7 +3,7 @@ function btnClicked() {
   var emailHtml = $("#emailEdit").html();
   var editableText = $('<input type="text" id="emailEdit" />');
   var pwHtml = $("#pwEdit").html();
-  var editableText2 = $('<input type="text" id="pwEdit" />');
+  var editableText2 = $('<input type="password" id="pwEdit"/>');
   var streetHtml = $("#streetEdit").html();
   var editableText3 = $('<input type="text" id="streetEdit" />');
   var cityHtml = $("#cityEdit").html();
@@ -53,8 +53,17 @@ function saveValues() {
     $('#cityEdit').html(localStorage.city);
   }
 
+  function showPW() {
+      $("#pwEdit").toggle();
+
+  }
+
+
+
+
   $(document).ready(function() {
     getValues();
     $("#editProfBtn").click(btnClicked);
     $("#saveBtn").click(saveClick);
+    $("#pwBtn").click(showPW);
   });
