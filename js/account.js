@@ -1,5 +1,6 @@
 function btnClicked() {
   $("#saveBtn").show();
+  $("#pwBtn").hide();
   var emailHtml = $("#emailEdit").html();
   var editableText = $('<input type="text" id="emailEdit" />');
   var pwHtml = $("#pwEdit").html();
@@ -37,6 +38,7 @@ function saveClick() {
   $("#streetEdit").replaceWith(viewableText3);
   $("#cityEdit").replaceWith(viewableText4);
   $("#saveBtn").hide();
+  $("#pwBtn").show();
   saveValues()
 
 }
